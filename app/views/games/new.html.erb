@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>New Game</h1>
+  <% @letters.each do |letter| %>
+    <span><%= letter %></span>
+  <% end %>
+  <form action="/score" method="TODO" data-turbo="false">
+    <%= hidden_field_tag :letters, @letters %>
+    <input type="text" name="word" placeholder="Type your answer here">
+    <input type="submit">
+  </form>
+</div>
